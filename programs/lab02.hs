@@ -28,11 +28,17 @@ diferencaAltura a b
     | altura(pess a) > altura(pess b) = altura(pess a) - altura(pess b)
     | otherwise = altura(pess b) - altura(pess a)
 
--- pessoaMaisAlta :: Int -> Int
--- pessoaMaisAlta a = c
---     where
---         b = maisAlta a a-1
---         c = pessoaMaisAlta b
+-- Encontrar a pessoa com a maior altura, até um identificador x (se x = 10, serão consideradas as pessoas de 1 a 10)
+pessoaMaisAlta::Int->Pessoa
+pessoaMaisAlta x = pess (maiorAltura 0.0 x 0)
+
+maiorAltura::Float->Int->Int->Int
+maiorAltura maior x posmaior
+    | x == 1 = posmaior
+    | altx > maior = maiorAltura altx (x-1) x
+    | otherwise = maiorAltura maior (x-1) posmaior
+    where 
+      altx  = altura(pess x) 
 
 ----- Exercício 2 -----
 
@@ -60,3 +66,8 @@ tipoTriangulo x y z
     | (x == y || x == z || y == z) && verificaTriangulo x y z = "Isosceles"
     | x /= y && y /= z && verificaTriangulo x y z = "Escaleno"
     | otherwise = "Nao eh um triangulo"
+
+----- Exercício 4 -----
+
+valorRealConvertido :: Float -> ((Float, String), (Float, String), (Float, String))
+valorRealConvertido x = ((x, "Real"), (x*0.20, "Euro"), (x*0.21, "Dolar"))
