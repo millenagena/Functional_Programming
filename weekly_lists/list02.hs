@@ -62,3 +62,11 @@ somaQuadrados x y = let soma1 = (x^2) + (y^2)
                     in if soma1>soma2 then soma1 else soma2
 
 -- Exercicio 05 --
+main :: IO()
+main = do putStrLn "Nome: "
+          nome <- getLine
+          putStrLn "Matricula: "
+          mat <- getLine
+          putStrLn "Nota: "
+          nota <- getLine
+          print("\n" ++ nome ++ " " ++ mat ++ " " ++ nota)
