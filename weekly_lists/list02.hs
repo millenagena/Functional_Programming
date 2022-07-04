@@ -1,3 +1,6 @@
+-- Millena Gena Pereira
+-- 12111BCC055
+
 -- Exercicio 01 --
 -- letra a
 ordena2 :: Int -> Int -> (Int, Int)
