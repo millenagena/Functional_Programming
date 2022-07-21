@@ -1,3 +1,6 @@
+-- Millena Gená Pereira
+-- 12111BCC055
+
 module Main (main) where
 import System.IO(stdout, hFlush, hSetBuffering, BufferMode(NoBuffering))
 
@@ -14,7 +17,7 @@ deposito valor = do
     let t = (read saldo) + valor
     putStrLn ("\nSaldo atualizado: " ++  show t)
     writeFile "saldo.txt" (show t)
-    appendFile "extrato.txt" ("\n+" ++ (show t))
+    appendFile "extrato.txt" ("\n+" ++ (show valor))
 
 saque :: Float -> IO()
 saque valor = do
@@ -24,7 +27,7 @@ saque valor = do
     let t = (read saldo) - valor
     putStrLn ("\nSaldo atualizado: " ++  show t)
     writeFile "saldo.txt" (show t)
-    appendFile "extrato.txt" ("\n-" ++ (show t))
+    appendFile "extrato.txt" ("\n-" ++ (show valor))
 
 main :: IO()
 main = do hSetBuffering stdout NoBuffering
@@ -44,7 +47,7 @@ main = do hSetBuffering stdout NoBuffering
                 putStrLn "\nSALDO ATUAL"
                 imprime "saldo.txt"
               2 -> do
-                putStrLn "\nEXTRATO"
+                putStrLn "\nEXTRATO ATUAL"
                 imprime "extrato.txt"
               3 -> do
                 putStrLn "\nSISTEMA DE DEPOSITO"
