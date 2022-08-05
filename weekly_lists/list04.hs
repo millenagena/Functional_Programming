@@ -56,4 +56,4 @@ lista :: Turma
 lista = [("Joao", 100), ("Paulo", 50), ("Maria", 55), ("Jose", 62)]
 
 aprovados :: Turma -> Int -> [NomeAluno]
-aprovados [(nome, nota)] 
+aprovados lst media = [x | (x,y) <- lst, y > media] 
