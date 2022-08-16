@@ -26,8 +26,12 @@ separa lst = (filter isAlpha lst, filter isDigit lst)
 -- 3 --
 
 -- a
-const :: a -> b -> a
-const x y = x
+
+-- troquei o nome para const1 porque estava dando erro no momento de execucao
+-- por ja ter uma funcao no preludio chamado const
+
+const1 :: a -> b -> a
+const1 x y = x
 -- recebe dois elementos e retorna o primeiro elemento de dois elementos que foram informados
 
 -- b
