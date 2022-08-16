@@ -37,7 +37,7 @@ const1 x y = x
 -- b
 swap :: (a,b) -> (b,a)
 swap (x,y) = (y,x)
--- recebe uma tupa com 2 elementos e retorna a tupla informada com os elementos invertidos
+-- recebe uma tupla com 2 elementos e retorna a tupla informada com os elementos invertidos
 
 -- c
 apply :: (a -> b) -> a -> b
