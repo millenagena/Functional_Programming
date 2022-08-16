@@ -41,8 +41,12 @@ apply f x = f x
 -- recebe uma funcao e um valor e retorna a chamada dessa funcao passando o valor como argumento 
 
 -- d
-flip :: (a -> b -> c) -> b -> a -> c
-flip f x y = f y x
+
+-- troquei o nome para flip1 porque estava dando erro no momento de execucao
+-- por ja ter uma funcao no preludio chamado flip
+
+flip1 :: (a -> b -> c) -> b -> a -> c
+flip1 f x y = f y x
 -- recebe uma funcao e dois valores e retorna a chamada dessa funcao passando os valores informados de forma invertida
 
 -- 4 --
