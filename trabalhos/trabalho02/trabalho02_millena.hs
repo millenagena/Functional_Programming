@@ -40,4 +40,3 @@ formataStrTotal lst = "Total" ++ ( replicate (30 - ( (length "Total" ) + (length
 
 geraNotaFiscal :: [Int] -> IO()
 geraNotaFiscal lst = writeFile "NotaFiscal.txt" ( (foldr (++) "" (map formataStrProduto lst)) ++ (formataStrTotal lst) )
-    
